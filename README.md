@@ -41,6 +41,6 @@ After the first deploy, set in Netlify: **Forms → Form notifications → Email
 1. Owner confirms the data controller name and privacy contact; replace the highlighted placeholder in both `privacy/` pages.
 2. Owner approves the 90-day retention wording.
 3. Set the Netlify notification email.
-4. Remove `<meta name="robots" content="noindex, nofollow">` from every page; add thank-you pages to nothing (they stay noindex).
+4. Remove `<meta name="robots" content="noindex, nofollow">` from the home, privacy and 404-independent pages (keep it on the two `thank-you/` pages).
 5. Add `robotics.al` as a custom domain in Netlify, then (with owner approval) update DNS at the registrar as shown in Netlify's domain panel.
 6. Do not collect real enquiries before steps 1–3 are done.
