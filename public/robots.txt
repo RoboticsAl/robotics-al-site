@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roboticsal.github.io/robotics-al-site/sitemap.xml
+Sitemap: https://robotics.al/sitemap.xml
