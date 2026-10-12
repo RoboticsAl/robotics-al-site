@@ -18,11 +18,11 @@ Open http://127.0.0.1:8000/ or `/en/`. Press Ctrl-C to stop. Browser refresh sho
 
 ## DNS cutover
 
-GitHub Pages repository Settings → Pages already has `robotics.al` saved. Current public DNS is delegated to Netlify's `nsone.net` nameservers and the apex/www records still target Shopify. To use Cloudys DNS, first create the GitHub Pages records in Cloudys Manage DNS, preserve any unrelated records, then save the Cloudys nameservers at the registrar. See `docs/CURRENT_STATE.md` for baseline and validation.
+GitHub Pages repository Settings → Pages already has `robotics.al` saved. Current public DNS is delegated to Netlify's `nsone.net` nameservers and the apex/www records still target Shopify. To use Cloudys DNS, first create the GitHub Pages records in Cloudys Manage DNS, preserve any unrelated records, then use only the authoritative nameservers confirmed for that Cloudys zone at the registrar. The `ns1/2/3.clouddns.com` text shown in the registrar form has not been validated as an authoritative robotics.al DNS service; do not save it merely because it is prefilled or typed. See `docs/CURRENT_STATE.md` for baseline and validation.
 
 Required A records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`. Required `www` CNAME: `roboticsal.github.io` (no repository path). Remove only conflicting Shopify A/AAAA/ALIAS/ANAME records for `@` and Shopify `www` records. Do not invent MX records; configure email separately with the selected provider. Preserve TXT/MX/CAA and any other unrelated records. Avoid wildcard DNS.
 
-After delegation and Pages DNS checks complete, enable Enforce HTTPS in GitHub Pages. Verify `https://robotics.al/`, `/en/`, `/privacy/`, `https://www.robotics.al/` redirect and certificate validity. Leave `noindex` until the contact channel is operational and the owner approves general promotion.
+After delegation and Pages DNS checks complete, enable Enforce HTTPS in GitHub Pages. If Cloudys Manage DNS cannot prepare an active zone and show its authoritative nameservers before delegation, stop and ask Cloudys support or edit the current authoritative DNS instead of switching blindly. Verify `https://robotics.al/`, `/en/`, `/privacy/`, `https://www.robotics.al/` redirect and certificate validity. Leave `noindex` until the contact channel is operational and the owner approves general promotion.
 
 ## Editing
 
